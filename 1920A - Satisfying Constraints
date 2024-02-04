@@ -1,0 +1,68 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        long long int start = INT_MIN,endval = INT_MAX,result = 0;
+        vector<long long int>notval;
+        cin>>n;
+        map<long long int,long long int>checker;
+
+        while(n--)
+        {
+            long long int type,constraint;
+            cin>>type;
+            cin>>constraint;
+            if(type == 1)
+            {
+                start = max(start,constraint);
+            }
+            else if(type == 2)
+            {
+                if(endval > constraint)
+                {
+                    endval = min(endval,constraint);
+
+                }
+            }
+            else if(type == 3)
+            {
+                notval.push_back(constraint);
+                checker[constraint] =1;
+
+            }
+        }
+        if(endval > start)
+        {
+            result = endval - start +1;
+            for(int i=0;i<notval.size();i++)
+            {
+                if( notval[i]>=start && notval[i]<=endval)
+                {
+                    --result;
+                }
+            }
+        }
+        else if(start==endval)
+        {
+            result = 1;
+            for(int i=0;i<notval.size();i++)
+        {
+            if(notval[i]<=endval && notval[i]>=start)
+            {
+                result--;
+            }
+        }
+        }
+
+
+        cout<<result<<endl;
+    }
+
+}
