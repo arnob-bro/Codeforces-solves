@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+   char s[4];
+   int t;
+   scanf("%d",&t);
+ 
+   while(t--)
+   {
+       scanf("%s", s);
+       if(s[0]==s[1] && s[1]==s[2] && s[2]== s[3])
+       {
+           printf("-1\n");
+       }
+       else if(s[0]!=s[1] && s[0]==s[2] && s[0]== s[3])
+       {
+            printf("6\n");
+       }
+       else if(s[0]==s[1] && s[0]!=s[2] && s[0]== s[3])
+       {
+            printf("6\n");
+       }
+       else if(s[0]==s[1] && s[0]==s[2] && s[0]!= s[3])
+       {
+            printf("6\n");
+       }
+       else if(s[0]!=s[1] && s[1]==s[2] && s[1]== s[3])
+       {
+            printf("6\n");
+       }
+       else
+        printf("4\n");
+   }
+   return 0;
+ 
+}
