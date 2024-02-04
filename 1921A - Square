@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+
+#define endl '\n'
+
+
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+	long long int t;
+	cin>>t;
+	while(t--)
+	{
+		vector<int> x;
+		vector<int> y;
+		vector<int> lengths;
+		long long int lowlen;
+
+		for(int i =0 ; i<4; i++)
+		{
+			long long int x1,y1;
+			cin>>x1>>y1;
+			x.push_back(x1);
+			y.push_back(y1);
+		}
+		for(int i =0 ; i<3; i++)
+		{
+            int a = abs(x[i]-x[i+1]) + abs(y[i] - y[i+1]);
+            lengths.push_back(a);
+		}
+		for(int i =0 ; i<2; i++)
+        {
+            lowlen = min(lengths[i],lengths[i+1]);
+        }
+        cout<<lowlen*lowlen<<endl;
+
+	}
+	return 0;
+}
