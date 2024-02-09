@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int m,n;
+    cin>>m>>n;
+    int semires = m*n;
+    while(semires%2 != 0)
+    {
+        semires--;
+    }
+    cout<<semires/2<<endl;
+}
