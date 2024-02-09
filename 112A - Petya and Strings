@@ -1,0 +1,94 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int f=0,s=0,d='a'-'A';
+
+    int c;
+    string ff,ss;
+    cin>>ff>>ss;
+    c=0;
+    while(ff[c] != NULL )
+    {
+        //cout<<"shdgshj"<<endl;
+        if(ff[c]>='A' &&ff[c]<='Z' && ss[c]>='a' && ss[c]<='z')
+        {
+            if(ff[c]>ss[c]-d)
+            {
+                f++;
+                break;
+            }
+            else if(ff[c]<ss[c]-d)
+            {
+                s++;
+                break;
+            }
+
+        }
+        else if(ff[c]>='A' &&ff[c]<='Z' && ss[c]>='A' && ss[c]<='Z')
+        {
+            if(ff[c]>ss[c])
+            {
+                f++;
+                break;
+            }
+            else if(ff[c]<ss[c])
+            {
+                s++;
+                break;
+            }
+
+        }
+        else if(ff[c]>='a' &&ff[c]<='z' && ss[c]>='a' && ss[c]<='z')
+        {
+            if(ff[c]>ss[c])
+            {
+                f++;
+                break;
+            }
+            else if(ff[c]<ss[c])
+            {
+                s++;
+                break;
+            }
+
+        }
+        else if(ff[c]>='a' &&ff[c]<='z' && ss[c]>='A' && ss[c]<='Z')
+        {
+            if(ff[c]-d>ss[c])
+            {
+                f++;
+                break;
+            }
+            else if(ff[c]-d<ss[c])
+            {
+                s++;
+                break;
+            }
+
+        }
+
+        c++;
+    }
+
+    if(f>s)
+    {
+        cout<<"1"<<endl;
+    }
+    else if(f<s)
+    {
+        cout<<"-1"<<endl;
+    }
+    else if(f==s)
+    {
+        cout<<"0"<<endl;
+    }
+
+
+
+
+}
+
+
+
+
