@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    int x = 0;
+    while(t--)
+    {
+
+        string s;
+        cin>>s;
+        if(s=="x++" || s=="X++" || s=="++x" || s=="++X")
+        {
+            x++;
+        }
+        else if(s=="x--" || s=="X--" || s=="--x" || s=="--X")
+        {
+            x--;
+        }
+    }
+    cout<<x<<endl;
+
+}
+
