@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    int ss=s.size();
+    queue<char>st;
+    for(int i=0; i<ss; i++)
+    {
+        if(s[i]!='A' && s[i]!='a' && s[i]!='E' && s[i]!='e' && s[i]!='I' && s[i]!='i' && s[i]!='O' && s[i]!='o' && s[i]!='U' && s[i]!='u' && s[i]!='Y' && s[i]!='y')
+        {
+            if(s[i]>='a' && s[i]<='z')
+            {
+                st.push(s[i]);
+            }
+            else if(s[i]>='A' && s[i]<= 'Z')
+            {
+                st.push(s[i]+('a'-'A'));
+            }
+        }
+    }
+    while(!st.empty())
+    {
+        cout<<"."<<st.front();
+        st.pop();
+    }
+    cout<<endl;
+}
