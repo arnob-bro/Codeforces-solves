@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    unordered_map<char,string> alphabet;
+    char i = 'a';
+    for(i='a';i<='z';i++)
+    {
+        alphabet[i] = "not used";
+    }
+    string s;
+    cin>>s;
+
+    int j,countt=0;
+    for(j=0;j<s.size();j++)
+    {
+        if(alphabet[s[j]] == "not used")
+        {
+            alphabet[s[j]] = "used";
+            countt++;
+        }
+    }
+    if(countt%2 == 0)
+    {
+        cout<<"CHAT WITH HER!"<<endl;
+    }
+    else
+    {
+        cout<<"IGNORE HIM!"<<endl;
+    }
+
+}
