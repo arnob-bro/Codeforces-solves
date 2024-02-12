@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long long int n,a,b,prev_moment = 0;
+        long long int f;
+        bool failed = false;
+        cin>>n>>f>>a>>b;
+        while(n--)
+        {
+            long long int moment;
+            cin>>moment;
+            if((moment - prev_moment)*a>b)
+            {
+
+                f=f-b;
+
+
+                //cout<<"turned off at moment "<<prev_moment<<endl;
+                //cout<<"turned on at moment "<<moment<<endl;
+            }
+            else
+            {
+
+                f=f-(moment-prev_moment)*a;
+
+
+                //cout<<"on from moment "<<prev_moment<<" to "<<moment<<endl;
+            }
+            //cout<<"crg remaining "<<f<<endl;
+
+            //cout<<"sent msg at moment ";
+
+            prev_moment = moment;
+            //cout<<prev_moment<<endl;
+        }
+
+        if(f>0)
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+        }
+
+
+    }
+}
+
