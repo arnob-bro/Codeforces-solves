@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int n;
+    cin>>n;
+    n=abs(n);
+    vector<int> s;
+    while(n!=0)
+    {
+        int dig= n%10;
+        s.push_back(dig);
+        n=n/10;
+    }
+    int ss = s.size();
+    int for4=0,for7=0;
+    for(int i=0;i<ss;i++)
+    {
+        if(s[i]==4)
+        {
+            for4++;
+        }
+        else if(s[i] == 7)
+        {
+            for7++;
+        }
+    }
+    if((for4+for7)== 4 || (for4+for7)==7)
+    {
+        cout<<"YES"<<endl;
+    }
+    else
+    {
+        cout<<"NO"<<endl;
+    }
+}
+
