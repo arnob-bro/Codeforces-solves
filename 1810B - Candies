@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n, i=0;
+        vector<int>s;
+        cin>>n;
+
+        while(n>0)
+        {
+            s.push_back(n%2);
+            n= n/2;
+
+        }
+
+
+        if(s[0]==1)
+        {
+            cout<<s.size()-1<<endl;
+            for(int j = s.size()-1;j>0;j--)
+            {
+                cout<<s[j]+1<<" ";
+            }
+            cout<<endl;
+        }
+        else
+        {
+            cout<<"-1"<<endl;
+        }
+    }
+}
