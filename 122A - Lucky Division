@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int num,temp,countt=0;
+    cin>>num;
+    temp = num;
+    int len=log10(num)+1;
+    while(temp!=0)
+    {
+        int dig = temp%10;
+        if(dig == 4 || dig == 7)
+        {
+            countt++;
+        }
+        temp=temp/10;
+    }
+    //cout<<len<<" "<<countt<<endl;
+    if(len == countt)
+    {
+
+        cout<<"YES"<<endl;
+    }
+    else
+    {
+        if(num%4==0 || num%7==0 || num%44==0 || num%47==0 || num%74==0 || num%77==0 || num%444==0 || num%447==0 || num%474==0 || num%477==0 || num%744==0 || num%747==0 || num%774==0 || num%777==0)
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+        }
+    }
+}
