@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,h,width=0;
+    cin>>n>>h;
+    while(n--)
+    {
+        int a;
+        cin>>a;
+        if(a<=h)
+        {
+            width++;
+        }
+        else
+        {
+            width = width+2;
+        }
+    }
+    cout<<width<<endl;
+}
