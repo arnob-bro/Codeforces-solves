@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,maxx=0,ase=0;
+    cin>>n;
+    while(n--)
+    {
+        int in,out;
+        cin>>out>>in;
+        ase=ase+in-out;
+        maxx=max(maxx,ase);
+    }
+    cout<<maxx<<endl;
+}
