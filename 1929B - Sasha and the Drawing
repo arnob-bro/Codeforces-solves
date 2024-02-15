@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long long int n,k;
+        cin>>n>>k;
+        int temp = k;
+        if(temp%2 ==0)
+        {
+            if(temp/2 <= 2*n-2)
+            {
+                cout<<temp/2<<endl;
+            }
+            else
+            {
+                cout<<(2*n-2)+(temp-2*(2*n-2))<<endl;
+            }
+ 
+        }
+        else
+        {
+            if(temp/2 <= 2*n-2)
+            {
+                temp++;
+                cout<<temp/2<<endl;
+            }
+            else
+            {
+                cout<<(2*n-2)+(temp-2*(2*n-2))<<endl;
+            }
+ 
+        }
+ 
+    }
+}
