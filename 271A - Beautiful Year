@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int y;
+    cin>>y;
+    y++;
+    while(1)
+    {
+        int temp = y;
+        int dig1=temp%10;
+        temp=temp/10;
+        int dig2=temp%10;
+        temp=temp/10;
+        int dig3=temp%10;
+        temp=temp/10;
+        int dig4=temp%10;
+        temp=temp/10;
+
+        if(dig1==dig2 ||dig1==dig3 || dig1 == dig4 || dig2 == dig3 || dig2 == dig4 || dig3 == dig4)
+        {
+            y++;
+            continue;
+        }
+        else
+        {
+            cout<<y<<endl;
+            break;
+        }
+
+    }
+}
