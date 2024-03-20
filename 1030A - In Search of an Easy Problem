@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,m=0;
+    cin>> n;
+    while(n--)
+    {
+        int i;
+        cin>>i;
+        m=m+i;
+    }
+    if(m>0)
+    {
+        cout<<"HARD"<<endl;
+    }
+    else
+    {
+        cout<<"EASY"<<endl;
+    }
+}
